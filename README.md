@@ -4,9 +4,15 @@ Java8 Spring 스터디 (20240325 ~ )
 
                 
 ## 참여 인원 
+<<<<<<< HEAD
 | [한상희](https://github.com/tkdgml822)                                         | [윤근식](https://github.com/geunsik2)                                          | [정희수](https://github.com/kingxeesu)                                          | [김도훈](https://github.com/dohun1109?tab=following)                            |
 |---|---|---|---|
 | <img src="https://avatars.githubusercontent.com/u/77792853?v=4" alt="이미지" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/104708869?v=4" alt="이미지" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/112453560?v=4" alt="이미지" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/108252423?v=4" alt="이미지" width="100" height="100"> |
+=======
+| [한상희](https://github.com/tkdgml822)| [정희수](https://github.com/kingxeesu)| [김도훈](https://github.com/dohun1109?tab=following)|
+|---|---|---|
+| <img src="https://avatars.githubusercontent.com/u/77792853?v=4" alt="이미지" width="100" height="100">| <img src="https://avatars.githubusercontent.com/u/112453560?v=4" alt="이미지" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/108252423?v=4" alt="이미지" width="100" height="100"> |
+>>>>>>> upstream/main
 
 ## 스케줄표(스프레드시트)
 - [스케줄표](https://docs.google.com/spreadsheets/d/1EkloGQq8Qmft0oaqB-Hfl2q7viW28y_5TsPkbYpG2Zk/edit#gid=0)
@@ -32,6 +38,7 @@ Java8 Spring 스터디 (20240325 ~ )
 참여 : ✅  
 불참 : 😵  
 
+<<<<<<< HEAD
 | 주차           | 한상희 | 윤근식 | 정희수 | 김도훈 |
 |--------------|--|----|-----|----|
 | 예시           | ✅ | ✅  | ✅   | ✅  |
@@ -46,6 +53,22 @@ Java8 Spring 스터디 (20240325 ~ )
 | 9주차 ()       |  |    |     |    | 
 | 10주차 ()      |  |    |     |    |  
 | 11주차 ()      |  |    |     |    | 
+=======
+| 주차           | 한상희 | 정희수 | 김도훈 |
+|--------------|-----|-----|-----|
+| 예시           | ✅   | ✅  | ✅   |
+| 1주차 (3월 25일) |     |    |     |   
+| 2주차 ()       |     |    |     |   
+| 3주차 ()       |     |    |     | 
+| 4주차 ()       |     |    |     | 
+| 5주차 ()       |     |    |     | 
+| 6주차 ()       |     |    |     |  
+| 7주차 ()       |     |    |     |  
+| 8주차 ()       |     |    |     |  
+| 9주차 ()       |     |    |     |  
+| 10주차 ()      |     |    |     |   
+| 11주차 ()      |     |    |     |  
+>>>>>>> upstream/main
 
 ## 주차별 정리
 
