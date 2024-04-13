@@ -4,9 +4,9 @@ Java8 Spring 스터디 (20240325 ~ )
 
                 
 ## 참여 인원 
-| [한상희](https://github.com/tkdgml822)| [정희수](https://github.com/kingxeesu)| [김도훈](https://github.com/dohun1109?tab=following)|
-|---|---|---|
-| <img src="https://avatars.githubusercontent.com/u/77792853?v=4" alt="이미지" width="100" height="100">| <img src="https://avatars.githubusercontent.com/u/112453560?v=4" alt="이미지" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/108252423?v=4" alt="이미지" width="100" height="100"> |
+| [한상희](https://github.com/tkdgml822)| [정희수](https://github.com/kingxeesu)| [김도훈](https://github.com/dohun1109?tab=following)| [노기봉](https://github.com/rohgibong)                                                        |
+|---|---|---|---|
+| <img src="https://avatars.githubusercontent.com/u/77792853?v=4" alt="이미지" width="100" height="100">| <img src="https://avatars.githubusercontent.com/u/112453560?v=4" alt="이미지" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/108252423?v=4" alt="이미지" width="100" height="100"> | <img src="https://avatars.githubusercontent.com/u/119557561?v=4" width="100" height="100"> |
 
 ## 스케줄표(스프레드시트)
 - [스케줄표](https://docs.google.com/spreadsheets/d/1EkloGQq8Qmft0oaqB-Hfl2q7viW28y_5TsPkbYpG2Zk/edit#gid=0)
@@ -21,8 +21,7 @@ Java8 Spring 스터디 (20240325 ~ )
 
 
 ## 파일명
-<del>마크다운 파일은 [O주차-0장]OOO.md (OOO은 이름)</del><br>
-자유
+해당 주차 학습한 스프링 프로젝트명
 
 ## 불참
 - 예치금 -3000(추후 배분), **릴스 촬영**
@@ -32,20 +31,20 @@ Java8 Spring 스터디 (20240325 ~ )
 참여 : ✅  
 불참 : 😵  
 
-| 주차           | 한상희 | 정희수 | 김도훈 |
-|--------------|-----|-----|-----|
-| 예시           | ✅  | ✅   | ✅  |
-| 1주차 (3월 30일) | ✅  | ✅   | ✅  |   
-| 2주차 (4월 7일)  | ✅  | ✅   | ✅  |   
-| 3주차 (4월 13일) |     |     |     | 
-| 4주차 ()       |     |     |     | 
-| 5주차 ()       |     |     |     | 
-| 6주차 ()       |     |     |     |  
-| 7주차 ()       |     |     |     |  
-| 8주차 ()       |     |     |     |  
-| 9주차 ()       |     |     |     |  
-| 10주차 ()      |     |     |     |   
-| 11주차 ()      |     |     |     |  
+| 주차           | 한상희 | 정희수 | 김도훈 | 노기봉 |
+|--------------|---|---|---|--|
+| 예시           | ✅ | ✅ | ✅ |  ✅|
+| 1주차 (3월 30일) | ✅ | ✅ | ✅ | ✅|  
+| 2주차 (4월 7일)  | ✅ | ✅ | ✅ | ✅| 
+| 3주차 (4월 13일) | ✅ |  | ✅ |  | 
+| 4주차 (4월 20일) |   |   |   |  | 
+| 5주차 ()       |   |   |   |  | 
+| 6주차 ()       |   |   |   |  |  
+| 7주차 ()       |   |   |   |  |  
+| 8주차 ()       |   |   |   |  |  
+| 9주차 ()       |   |   |   |  |  
+| 10주차 ()      |   |   |   |  |   
+| 11주차 ()      |   |   |   |  |  
 
 ## 주차별 정리
 
