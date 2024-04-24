@@ -20,7 +20,7 @@ public class OrderServiceImpl implements OrderService{
 
     // 생성자가 1개만 있으면 Autowired를 생략해도 자동 주입이 된다.
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
