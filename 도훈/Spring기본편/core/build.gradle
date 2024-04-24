@@ -20,7 +20,8 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
-
+    implementation 'jakarta.inject:jakarta.inject-api:2.0.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 
 
 }

@@ -35,7 +35,7 @@ public class AppConfig {
         System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
-    
+
     @Bean
     public OrderService orderService(){
         System.out.println("call AppConfig.orderService");
@@ -47,6 +47,6 @@ public class AppConfig {
         return new RateDiscountPolicy();
         //return new FixDiscountPolicy();
     }
-    
+
 
 }
