@@ -1,5 +1,6 @@
 package kr.co.hanbit.product.management.infrastructure;
 
+import kr.co.hanbit.product.management.domain.EntityNotFoundException;
 import kr.co.hanbit.product.management.domain.Product;
 import org.springframework.stereotype.Repository;
 
@@ -28,7 +29,7 @@ public class ListProductRepository {
                 // findFirst : 스트림의 첫번째 요소를 Optional형태로 반환
                 .findFirst()
                 // orElseThrow : Optional 객체가 비어있을 경우 예외를 발생
-                .orElseThrow();
+                .orElseThrow(() -> new EntityNotFoundException("Product를 찾지 못했습니다."));
     }
 
     public List<Product> findAll(){
