@@ -19,11 +19,11 @@ public class FrontControllerServletV1 extends HttpServlet {
     private Map<String, ControllerV1> controllerV1Map = new HashMap<>();    //Request URL, Controller Instance
 
     public FrontControllerServletV1() {
+        controllerV1Map.put("/front-controller/v1/members", new MemberListControllerV1());
         controllerV1Map.put("/front-controller/v1/members/new-form", new MemberFormControllerV1());
         controllerV1Map.put("/front-controller/v1/members/save", new MemberSaveControllerV1());
-        controllerV1Map.put("/front-controller/v1/members", new MemberListControllerV1());
-    }
 
+    }
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("FrontControllerServletV1.service");
