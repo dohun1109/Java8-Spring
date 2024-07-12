@@ -1,0 +1,12 @@
+hello/login/ItemServiceApplicationTests.java
+ hello.login.ItemServiceApplicationTests
+hello/login/validation/BeanValidationTest.java
+ hello.login.validation.BeanValidationTest
+hello/login/domain/item/ItemRepositoryTest.java
+ hello.login.domain.item.ItemRepositoryTest
+hello/login/message/MessageSourceTest.java
+ hello.login.message.MessageSourceTest
+hello/login/validation/MessageCodesResolverTest.java
+ hello.login.validation.MessageCodesResolverTest
+hello/login/web/session/SessionManagerTest.java
+ hello.login.web.session.SessionManagerTest
