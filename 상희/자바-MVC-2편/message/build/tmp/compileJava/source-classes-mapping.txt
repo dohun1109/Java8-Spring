@@ -1,0 +1,10 @@
+hello/itemservice/domain/item/ItemRepository.java
+ hello.itemservice.domain.item.ItemRepository
+hello/itemservice/TestDataInit.java
+ hello.itemservice.TestDataInit
+hello/itemservice/domain/item/Item.java
+ hello.itemservice.domain.item.Item
+hello/itemservice/web/message/MessageItemController.java
+ hello.itemservice.web.message.MessageItemController
+hello/itemservice/ItemServiceApplication.java
+ hello.itemservice.ItemServiceApplication
