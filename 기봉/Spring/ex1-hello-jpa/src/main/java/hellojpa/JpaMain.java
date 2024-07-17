@@ -18,14 +18,14 @@ public class JpaMain {
 
         try{
 
-            //영속
             Member member = em.find(Member.class, 150L);
-            member.setName("ZZZZZ");
+            member.setName("AAAAA");
 
-            em.persist(member);
+            em.clear();
+
+            Member member2 = em.find(Member.class, 150L);
 
             System.out.println("=====================");
-
             tx.commit();
         } catch(Exception e){
             tx.rollback();
