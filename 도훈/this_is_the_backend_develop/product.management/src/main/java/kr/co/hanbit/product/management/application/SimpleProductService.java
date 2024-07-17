@@ -1,9 +1,10 @@
 package kr.co.hanbit.product.management.application;
 
 import kr.co.hanbit.product.management.domain.Product;
+import kr.co.hanbit.product.management.domain.ProductRepository;
+import kr.co.hanbit.product.management.infrastructure.DatabaseProductRepository;
 import kr.co.hanbit.product.management.infrastructure.ListProductRepository;
 import kr.co.hanbit.product.management.presentation.ProductDto;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +13,16 @@ import java.util.List;
 @Service
 public class SimpleProductService {
 
-    private final ModelMapper modelMapper;
-    private ListProductRepository listProductRepository;
+//    private final ModelMapper modelMapper;
+//    private ListProductRepository listProductRepository;
+    private ProductRepository productRepository;
+    private ValidationService validationService;
 
     @Autowired
-    public SimpleProductService(ListProductRepository listProductRepository, ModelMapper modelMapper) {
-        this.listProductRepository = listProductRepository;
-        this.modelMapper = modelMapper;
+    public SimpleProductService(ProductRepository productRepository, ValidationService validationService) {
+        this.productRepository = productRepository;
+//        this.modelMapper = modelMapper;
+        this.validationService = validationService;
     }
 
     /**
@@ -30,13 +34,13 @@ public class SimpleProductService {
      */
     public ProductDto add(ProductDto productDto) {
         //1. Product 를 Product로 변환하는 코드
-        Product product = modelMapper.map(productDto, Product.class);
-
+        Product product = ProductDto.toEntity(productDto);
+        validationService.checkValid(product);
         //2. 레포지토리를 호출하는 코드
-        Product savedProduct = listProductRepository.add(product);
+        Product savedProduct = productRepository.add(product);
 
         //3. Product 를 Product 로 변환하는 코드
-        ProductDto savedProductDto = modelMapper.map(savedProduct, ProductDto.class);
+        ProductDto savedProductDto = ProductDto.toDto(savedProduct);
 
         //4. DTO 를 반환하는 코드
         return savedProductDto;
@@ -44,34 +48,37 @@ public class SimpleProductService {
 
 
     public ProductDto findById(Long id) {
-        Product product = listProductRepository.findById(id);
-        ProductDto productDto = modelMapper.map(product, ProductDto.class);
+        Product product = productRepository.findById(id);
+        ProductDto productDto = ProductDto.toDto(product);
         return productDto;
     }
 
     public List<ProductDto> findAll() {
-        List<Product> products = listProductRepository.findAll();
+        List<Product> products = productRepository.findAll();
         List<ProductDto> productDtos = products.stream()
-                .map(product -> modelMapper.map(product, ProductDto.class))
+                .map(product -> ProductDto.toDto(product))
                 .toList();
         return productDtos;
     }
 
     public List<ProductDto> findByNameContaining(String name) {
-        List<Product> products = listProductRepository.findByNameContaining(name);
+        List<Product> products = productRepository.findByNameContaining(name);
 
         List<ProductDto> productDtos = products.stream()
-                .map(product -> modelMapper.map(product, ProductDto.class))
+                .map(product -> ProductDto.toDto(product))
                 .toList();
         return productDtos;
     }
 
     public ProductDto update(ProductDto productDto) {
-        Product product = modelMapper.map(productDto, Product.class);
-        Product updateProduct = listProductRepository.update(product);
-        ProductDto updateProductDto = modelMapper.map(updateProduct, ProductDto.class);
+        Product product = ProductDto.toEntity(productDto);
+        Product updateProduct = productRepository.update(product);
+        ProductDto updateProductDto = ProductDto.toDto(updateProduct);
 
         return updateProductDto;
     }
-    
+
+    public void delete(Long id) {
+        productRepository.delete(id);
+    }
 }

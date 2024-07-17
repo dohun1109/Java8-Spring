@@ -1,5 +1,6 @@
 package kr.co.hanbit.product.management.presentation;
 
+import jakarta.validation.Valid;
 import kr.co.hanbit.product.management.application.SimpleProductService;
 import kr.co.hanbit.product.management.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class ProductController {
 
     // 상품 추가
     @PostMapping
-    public ProductDto createProduct(@RequestBody ProductDto productDto) {
+    public ProductDto createProduct(@Valid @RequestBody ProductDto productDto) {
         // Product 를 생성하고 리스트에 넣는 작업이 필요함.(clear)
         return simpleProductService.add(productDto);
     }
@@ -47,5 +48,10 @@ public class ProductController {
     ) {
         productDto.setId(id);
         return simpleProductService.update(productDto);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteProduct(@PathVariable Long id) {
+        simpleProductService.delete(id);
     }
 }
