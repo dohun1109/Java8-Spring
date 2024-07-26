@@ -1,16 +1,18 @@
 package hellojpa;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.EntityTransaction;
-import jakarta.persistence.Persistence;
+import jakarta.persistence.*;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
+import org.hibernate.Hibernate;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 public class JpaMain {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
-
         EntityManager em = emf.createEntityManager();
 
         EntityTransaction tx = em.getTransaction();
@@ -18,21 +20,27 @@ public class JpaMain {
 
         try{
 
-            Member member = em.find(Member.class, 150L);
-            member.setName("AAAAA");
+            Member member = new Member();
+            member.setUsername("member1");
+            em.persist(member);
 
-            em.clear();
+            List<Member> resultList = em.createNativeQuery("select MEMBER_ID, city, street, zipcode, USERNAME from MEMBER", Member.class)
+                    .getResultList();
 
-            Member member2 = em.find(Member.class, 150L);
+            for (Member member1 : resultList) {
+                System.out.println("member1 = " + member1);
+            }
 
-            System.out.println("=====================");
+
             tx.commit();
         } catch(Exception e){
             tx.rollback();
+            e.printStackTrace();
         } finally{
             em.close();
         }
 
         emf.close();
     }
+
 }
