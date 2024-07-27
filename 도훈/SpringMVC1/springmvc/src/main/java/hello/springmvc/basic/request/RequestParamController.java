@@ -93,7 +93,7 @@ public class RequestParamController {
     @ResponseBody
     @RequestMapping("/model-attribute-v1")
     public String modelAttributeV1(@ModelAttribute HelloData helloData) { //@ModelAttribute 생략가능
-        /**
+        /*
          * 스프링 MVC 는 @ModelAttribute 가 있으면 다음을 실행한다.
          * 요청 파라미터의 이름으로 HelloData 객체의 프로퍼티를 찾는다. 그리고 해당 프로퍼티의 setter 를 호출해서 파라미터의 값을 입력(바인딩) 한다. 
          */
@@ -107,7 +107,7 @@ public class RequestParamController {
     @RequestMapping("/model-attribute-v2")
     public String modelAttributeV2( HelloData helloData) { //@ModelAttribute 생략가능
 
-        /**
+        /*
          *  그런데, @RequestParam 도 생략할 수 있으니 혼란이 발생할 수 있다.
          *
          *  스프링은 해당 생략시 다음과 같은 규칙을 적용한다.
