@@ -50,7 +50,7 @@ public class FrontControllerServletV3 extends HttpServlet {
         view.render(mv.getModel(),request,response);
         
     }
-                 
+
     private static MyView viewResolver(String viewName) {
         return new MyView("/WEB-INF/views/" + viewName + ".jsp");
     }

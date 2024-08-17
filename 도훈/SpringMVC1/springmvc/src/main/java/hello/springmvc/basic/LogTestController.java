@@ -23,9 +23,11 @@ public class LogTestController {
 
       log.trace(" trace my log=" + name);    //자동으로 연산이 일어남,즉. resource 낭비가 일어남
 
+      //실제 서버에는 안찍힘
       log.trace(" trace log={}", name);
-
       log.debug(" debug log={}", name);   //debug 정보
+
+      // 운영서버에도 찍힘
       log.info(" info log={}", name);  //중요한 정보, EX)비즈니스정보, 운영시스템에서 보는 정보
       log.warn(" warn log={}", name);  //경고 위험
       log.error(" error log={}", name);   //error

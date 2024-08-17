@@ -2,6 +2,9 @@ package hello.springmvc.basic;
 
 import lombok.Data;
 
+/**
+ * `@Data` -> @Getter, @Setter, @ToString, @EqualsAndHashCode, @RequiredArgusConstructor
+ */
 @Data
 public class HelloData {
 

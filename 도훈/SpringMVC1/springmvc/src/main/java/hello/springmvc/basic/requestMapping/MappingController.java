@@ -25,6 +25,7 @@ public class MappingController {
      *스프링 부트 3.0 이후
      * /hello-basic, hello-basic/ 는 서로 다른 URL 요청을 사용해야 한다.
      */
+
     public String helloBasic() {
         log.info("helloBasic");
         return "ok";
@@ -134,6 +135,7 @@ public class MappingController {
      * produces = "text/*"
      * produces = "*\/*"
      */
+
     @PostMapping(value = "/mapping-produce", produces = MediaType.TEXT_HTML_VALUE)
     public String mappingProduces() {
         log.info("mappingProduces");

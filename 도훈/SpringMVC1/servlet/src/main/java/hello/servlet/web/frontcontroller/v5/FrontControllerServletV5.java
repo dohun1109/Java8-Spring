@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet(name = "frontControllerServletV4", urlPatterns = "/front-controller/v5/*")
+@WebServlet(name = "frontControllerServletV5", urlPatterns = "/front-controller/v5/*")
 public class FrontControllerServletV5 extends HttpServlet {
 
     private final Map<String, Object> handlerMappingMap = new HashMap<>();
@@ -85,6 +85,8 @@ public class FrontControllerServletV5 extends HttpServlet {
     private static MyView viewResolver(String viewName) {
         return new MyView("/WEB-INF/views/" + viewName + ".jsp");
     }
+
+
     private Object getHandler(HttpServletRequest request) {
         String requestURI = request.getRequestURI();    // /front-ControllerV3/members/new-from
         return handlerMappingMap.get(requestURI);

@@ -6,10 +6,17 @@ import org.hibernate.validator.constraints.URL;
 public class ShortenUrlCreateRequestDto {
 
     @NotNull
-    @URL(regexp = "/^http(s)?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$/")
+    @URL(regexp = "^https?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$")
     private String originalUrl;
 
-    public @NotNull @URL(regexp = "/^http(s)?:\\/\\/(?:www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b(?:[-a-zA-Z0-9()@:%_\\+.~#?&\\/=]*)$/") String getOriginalUrl() {
+    public ShortenUrlCreateRequestDto() {
+    }
+
+    public ShortenUrlCreateRequestDto(String originalUrl) {
+        this.originalUrl = originalUrl;
+    }
+
+    public  String getOriginalUrl() {
         return originalUrl;
     }
 }

@@ -46,5 +46,6 @@ public class MappingClassController {
     @DeleteMapping("/{userId}")
     public String deleteUser(@PathVariable String userId) {
         return "delete userId" + userId;
+
     }
 }
